@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ci-cd-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ci-cd-sample
+  template:
+    metadata:
+      labels:
+        app: ci-cd-sample
+    spec:
+      containers:
+      - name: ci-cd-sample
+        image: futureglow/ci-cd-sample:latest
+        ports:
+        - containerPort: 8080
