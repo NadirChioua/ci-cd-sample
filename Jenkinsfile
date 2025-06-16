@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/NadirChioua/ci-cd-sample-project.git'
+                git 'https://github.com/NadirChioua/ci-cd-sample.git'
             }
         }
         stage('Build') {
